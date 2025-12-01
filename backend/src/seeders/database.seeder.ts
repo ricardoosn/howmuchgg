@@ -588,6 +588,8 @@ export class DatabaseSeeder extends Seeder {
           price: snapshot.price,
           playerPeak: snapshot.playerPeak,
           date: snapshot.date,
+          createdAt: snapshot.date,
+          updatedAt: snapshot.date,
         });
         em.persist(snapshotEntity);
       });
@@ -614,6 +616,8 @@ export class DatabaseSeeder extends Seeder {
           user,
           game,
           povPrice: priceSeed.povPrice,
+          createdAt: new Date(),
+          updatedAt: new Date(),
         });
         em.persist(userPrice);
       });
